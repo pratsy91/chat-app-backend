@@ -128,8 +128,6 @@ const renameGroup = asyncHandler(async (req, res) => {
 const removeFromGroup = asyncHandler(async (req, res) => {
   const { chatId, userId } = req.body;
 
-  // check if the requester is admin
-
   const removed = await Chat.findByIdAndUpdate(
     chatId,
     {
